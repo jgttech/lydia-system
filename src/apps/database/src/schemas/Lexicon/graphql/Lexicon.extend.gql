@@ -1,0 +1,26 @@
+extend type Query {
+    lexiconAll: LexiconResponse
+    lexiconById(_id: ID!): LexiconResponse
+    lexiconByInput(input: String!): LexiconResponse
+    lexiconCount: LexiconResponseCount
+    lexiconEntityCount(_id: ID!): LexiconResponseCount
+    lexiconSearchByInput(input: String!, limit: Int, options: QueryLexiconOptions): LexiconResponseArray
+}
+
+extend type Mutation {
+    lexiconCreateOne(input: String!): LexiconResponse
+    lexiconUpdateOne(_id: ID!, input: String!): LexiconResponse
+    lexiconRemoveOne(_id: ID!): LexiconResponse
+
+    lexiconCreateMany(lexicons: [MutationLexicon]!): LexiconResponseArray
+    lexiconUpdateMany(inputs: [MutationLexiconInputArray]!): LexiconResponseArray
+    lexiconRemoveMany(ids: [ID]!): LexiconResponseArray
+
+    lexiconCreateOneEntity(_id: ID!, entity: MutationLexiconEntity!): LexiconResponse
+    lexiconUpdateOneEntity(_id: ID!, _entity: ID!, entity: MutationLexiconEntity!): LexiconResponse
+    lexiconRemoveOneEntity(_id: ID!, _entity: ID!): LexiconResponse
+
+    lexiconCreateManyEntities(_id: ID!, entities: [MutationLexiconEntity]!): LexiconResponse
+    lexiconUpdateManyEntities(_id: ID!, entities: [MutationLexiconUpdateEntity]!): LexiconResponse
+    lexiconRemoveManyEntities(_id: ID!, _entities: [ID]!): LexiconResponse
+}

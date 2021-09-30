@@ -1,0 +1,30 @@
+{
+  "name": "lydia-ai",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "colors": "^1.4.0",
+    "favicons-webpack-plugin": "^3.0.1",
+    "html-webpack-plugin": "^4.3.0",
+    "lerna": "^3.20.2",
+    "raw-loader": "^4.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.0.0",
+    "yaml": "^1.10.0",
+    "yargs": "^15.3.1"
+  }
+}

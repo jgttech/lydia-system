@@ -1,0 +1,20 @@
+type EntityResponse {
+    code: Float
+    errors: [String]
+    data: Entity
+}
+
+type EntityResponseArray {
+    code: Float
+    errors: [String]
+    data: [Entity]
+}
+
+type Entity @key(fields: "_id") {
+    _id: ID
+    created: String
+    modified: String
+    label: String
+    backgroundColor: String
+    accentColor: String
+}

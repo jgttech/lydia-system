@@ -1,0 +1,113 @@
+type ThreadResponse {
+    code: Float
+    errors: [String]
+    data: Thread
+}
+
+type ThreadMessageResponse {
+    code: Float
+    errors: [String]
+    data: ThreadMessage
+}
+
+type ThreadResponseArray {
+    code: Float
+    errors: [String]
+    data: [Thread]
+}
+
+type ThreadMessageResponseArray {
+    code: Float
+    errors: [String]
+    data: [ThreadMessage]
+}
+
+type Thread @key(fields: "_id") {
+    _id: ID
+    created: String
+    modified: String
+    numbers: [String]
+    messages: [ThreadMessage]
+    data: ThreadData
+    analysis: ThreadAnalysis
+}
+
+type ThreadMessage {
+    _id: ID
+    created: String
+    modified: String
+    number: String!
+    message: String!
+    origin: EnumThreadMessageOrigin
+    analysis: ThreadAnalysis
+}
+
+type ThreadData {
+    _id: ID
+    created: String
+    modified: String
+    buy: ThreadDataBuy
+    sell: ThreadDataSell
+    rent: ThreadDataRent
+}
+
+type ThreadDataBuy {
+    location: String
+    priceRange: String
+    propertyType: String
+    beds: String
+    baths: String
+}
+
+type ThreadDataSell {
+    why: String
+    meeting: String
+    timeframe: String
+    condition: String
+    priceRange: String
+    propertyType: String
+    address: String
+}
+
+type ThreadDataRent {
+    location: String
+    priceRange: String
+    propertyType: String
+    beds: String
+    baths: String
+}
+
+type ThreadAnalysis {
+    _id: ID
+    created: String
+    modified: String
+    sentiment: ThreadAnalysisSentiment
+    emotion: ThreadAnalysisEmotion
+    sarcasm: ThreadAnalysisSarcasm
+}
+
+type ThreadAnalysisSentiment {
+    created: String
+    modified: String
+    positive: String
+    neutral: String
+    negative: String
+}
+
+type ThreadAnalysisEmotion {
+    created: String
+    modified: String
+    happy: String
+    angry: String
+    excited: String
+    sad: String
+    fear: String
+    bored: String
+}
+
+type ThreadAnalysisSarcasm {
+    created: String
+    modified: String
+    sarcastic: String
+    nonSarcastic: String
+}

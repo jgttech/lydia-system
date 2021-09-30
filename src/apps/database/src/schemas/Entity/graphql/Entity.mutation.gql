@@ -1,0 +1,17 @@
+input EntityMutationInput {
+    label: String
+    backgroundColor: String
+    accentColor: String
+}
+
+input EntityMutationInputWithId {
+    _id: ID!
+    label: String
+    backgroundColor: String
+    accentColor: String
+}
+
+input EntityMutationColor {
+    backgroundColor: String
+    accentColor: String
+}

@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - python3 --version
+
+artifacts:
+  discard-paths: no
+  base-directory: src/apps/ai/lydia
+  name: lydia-ai-artifact
+  files:
+    - "**/*"

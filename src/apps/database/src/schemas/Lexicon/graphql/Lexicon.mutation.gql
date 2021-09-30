@@ -1,0 +1,28 @@
+input MutationLexicon {
+    input: String!
+    entities: [MutationLexiconEntity]
+}
+
+input MutationLexiconEntity {
+    label: String
+    start: Int
+    stop: Int
+}
+
+input MutationLexiconEntityData {
+    _id: ID!
+    label: String
+    start: Int
+    stop: Int
+}
+
+input MutationLexiconUpdateEntity {
+    _id: ID!
+    entity: MutationLexiconEntity
+}
+
+input MutationLexiconInputArray {
+    _id: ID!
+    input: String
+    entities: [MutationLexiconEntityData]
+}

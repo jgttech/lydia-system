@@ -1,0 +1,6 @@
+env:
+  - DB_CONNECTION
+  - NODE_ENV
+  - PORT
+  - DESC
+  - PLAYGROUND

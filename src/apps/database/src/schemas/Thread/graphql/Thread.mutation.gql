@@ -1,0 +1,69 @@
+input MutationThreadMessageCreate {
+    number: String!
+    message: String!
+    origin: EnumThreadMessageOrigin!
+}
+
+input MutationThreadMessageUpdate {
+    number: String
+    message: String
+    origin: EnumThreadMessageOrigin
+}
+
+input MutationThreadAnalysis {
+    emotion: MutationThreadAnalysisEmotion
+    sarcasm: MutationThreadAnalysisSarcasm
+    sentiment: MutationThreadAnalysisSentiment
+}
+
+input MutationThreadAnalysisEmotion {
+    happy: Float
+    angry: Float
+    excited: Float
+    sad: Float
+    fear: Float
+    bored: Float
+}
+
+input MutationThreadAnalysisSentiment {
+    positive: Float
+    neutral: Float
+    negative: Float
+}
+
+input MutationThreadAnalysisSarcasm {
+    sarcastic: Float
+    nonSarcastic: Float
+}
+
+input MutationThreadData {
+    buy: MutationThreadDataBuy
+    sell: MutationThreadDataSell
+    rent: MutationThreadDataRent
+}
+
+input MutationThreadDataBuy {
+    location: String
+    priceRange: String
+    propertyType: String
+    beds: String
+    baths: String
+}
+
+input MutationThreadDataSell {
+    why: String
+    meeting: String
+    timeframe: String
+    condition: String
+    priceRange: String
+    propertyType: String
+    address: String
+}
+
+input MutationThreadDataRent {
+    location: String
+    priceRange: String
+    propertyType: String
+    beds: String
+    baths: String
+}

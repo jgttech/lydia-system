@@ -1,0 +1,4 @@
+enum EnumThreadMessageOrigin {
+    inbound
+    outbound
+}

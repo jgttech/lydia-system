@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "src/apps/**/*"
+  ],
+  "version": "independent",
+  "npmClient": "pnpm",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "*.md"
+      ]
+    }
+  }
+}

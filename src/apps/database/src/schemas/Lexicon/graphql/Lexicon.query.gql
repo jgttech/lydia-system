@@ -1,0 +1,25 @@
+input QueryLexiconOptions {
+    exactMatch: Boolean
+}
+
+input QueryLexicon {
+    _id: ID
+    created: String
+    modified: String
+    input: String
+    entities: [QueryLexiconEntity]
+}
+
+input QueryLexiconEntity {
+    _id: ID
+    created: String
+    modified: String
+    label: String
+    start: Int
+    stop: Int
+}
+
+input QueryLexiconPagination {
+    page: Int
+    limit: Int
+}

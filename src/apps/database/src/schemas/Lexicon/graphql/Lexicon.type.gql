@@ -1,0 +1,34 @@
+type LexiconResponse {
+    code: Float
+    errors: [String]
+    data: Lexicon
+}
+
+type LexiconResponseCount {
+    code: Float
+    errors: [String]
+    data: Int
+}
+
+type LexiconResponseArray {
+    code: Float
+    errors: [String]
+    data: [Lexicon]
+}
+
+type Lexicon @key(fields: "_id") {
+    _id: ID
+    created: String
+    modified: String
+    input: String
+    entities: [LexiconEntity]
+}
+
+type LexiconEntity @key(fields: "_id") {
+    _id: ID
+    created: String
+    modified: String
+    label: String
+    start: Int
+    stop: Int
+}

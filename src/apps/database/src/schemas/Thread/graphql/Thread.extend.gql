@@ -1,0 +1,19 @@
+extend type Query {
+    threadById(_id: ID!): ThreadResponse
+    threadByNumbers(numbers: [String]!): ThreadResponse
+    threadMessageById(_id: ID!, _message: ID!): ThreadMessageResponse
+    threadMessageByNumber(_id: ID!, number: String!): ThreadMessageResponseArray
+    threadMessageLatest(_id: ID!): ThreadMessageResponse
+}
+
+extend type Mutation {
+    threadCreateOne(numbers: [String]!): ThreadResponse
+    threadRemoveOne(_id: ID!): ThreadResponse
+
+    threadCreateOneMessage(_id: ID!, message: MutationThreadMessageCreate): ThreadResponse
+    threadUpdateOneMessage(_id: ID!, _message: ID!, message: MutationThreadMessageUpdate): ThreadResponse
+    threadRemoveOneMessage(_id: ID!, _message: ID!): ThreadResponse
+
+    threadUpdateMessageAnalysis(_id: ID!, _message: ID!, analysis: MutationThreadAnalysis!): ThreadResponse
+    threadUpdateData(_id: ID!, data: MutationThreadData!): ThreadResponse
+}

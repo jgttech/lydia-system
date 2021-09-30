@@ -1,0 +1,4 @@
+trainer:
+  gateway: http://lydiadatabasetest-env.eba-wwkaniw3.us-east-2.elasticbeanstalk.com/
+  epochs: 1000
+  model: .models/spacy_model

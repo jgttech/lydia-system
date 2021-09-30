@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+  pre_build:
+    commands:
+      - npm install
+      - cd src/apps/trainer/react-web
+      - npm install
+  build:
+    commands:
+      - npm run build
+      - cd .dist
+      - npm i --production
+
+artifacts:
+  discard-paths: no
+  base-directory: src/apps/trainer/react-web/.dist
+  name: lydia-trainer-artifact
+  files:
+    - "**/*"
